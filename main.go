@@ -104,6 +104,7 @@ func main() {
 
     sensores:=map[string]int{
         
+
     }
 
     pruebas.ProcesarSensores(lecturas)
