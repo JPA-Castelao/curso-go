@@ -3,7 +3,6 @@ package main
 import (
 	"errors"
 	"fmt"
-	"time"
 )
 var nivelPaquete =6
 const Pi =3.14
@@ -259,33 +258,46 @@ func main() {
 //go routines
 
 
+//go routines and channels
+
+// ch :=make(chan int)
+
+//     go func(){
+//         ch<- 42
+//     }()
+
+//     val:=<-ch
+//      go  printNumbers(4,ch)
+
+//      t:=<-ch
+//     resultado:=val+t
+//     fmt.Printf("\nResultado: %d",resultado)
 
 
-printNumbers(4)
+//     go printNumbers(5 ,ch)
+//      go printNumbers(5,ch)
+// time.Sleep(2*time.Second)
 
-go printNumbers(5)
-go printNumbers(5)
+// }
+// func printNumbers(n int,resultadoChan chan int){
 
-time.Sleep(time.Second)
+//     var total int
+//     for i:=0;i<=n;i++{
+//         fmt.Println(i)
+//         total+=i
+//         time.Sleep(100*time.Millisecond)
+        
+//     }
+//     resultadoChan<-total
+// }
 
-ch :=make(chan int)
 
-    go func(){
-        ch<- 42
-    }()
-    val:=<-ch
-    fmt.Println(val)
+
+
+
+
 
 
 }
-func printNumbers(n int){
-
-    for i:=0;i<=n;i++{
-        fmt.Println(i)
-        time.Sleep(100*time.Millisecond)
-    }
-    
-}
-
 
 
